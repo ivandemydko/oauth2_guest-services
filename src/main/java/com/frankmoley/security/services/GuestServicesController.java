@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.parameters.P;
+
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -32,6 +32,7 @@ public class GuestServicesController {
 
     @GetMapping
     public List<Guest> getAllGuests(){
+        System.out.println("In getALLGuests controller ");
         return new ArrayList<>(this.repository.findAll());
     }
 
